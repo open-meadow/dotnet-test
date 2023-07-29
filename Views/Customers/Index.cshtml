@@ -1,0 +1,56 @@
+@model IEnumerable<WebFirstMVC.Models.Customers>
+
+<h1>This is my Index Page of Customers </h1>
+
+<table>
+
+    <thead>
+
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model=> model.Customers_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=> model.Customers_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=> model.Customers_Balance)
+            </th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customers_Id)
+                </td>
+                <td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.Customers_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customers_Balance)
+                </td>
+
+            </tr>
+        }
+
+
+
+    </tbody>
+
+
+</table>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>Hello from our View Template!</p>
